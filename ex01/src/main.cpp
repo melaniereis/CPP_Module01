@@ -6,7 +6,7 @@
 /*   By: meferraz <meferraz@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 14:36:54 by meferraz          #+#    #+#             */
-/*   Updated: 2025/03/24 15:58:41 by meferraz         ###   ########.fr       */
+/*   Updated: 2025/03/24 21:39:35 by meferraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
  */
 static void printHeader() {
 	std::cout << GRN << "=====================================" << RESET << std::endl;
-	std::cout << BLUHB << "          Zombie Horde Demo         " << RESET << std::endl;
+	std::cout << BLUHB << "          Zombie Horde Demo          " << RESET << std::endl;
 	std::cout << GRN << "=====================================" << RESET << std::endl;
 }
 
@@ -116,5 +116,6 @@ int main(int argc, char** argv)
 		return EXIT_FAILURE;
 
 	std::cout << GRN "Program execution completed successfully!" RESET << std::endl;
+	printSeparator();
 	return EXIT_SUCCESS;
 }

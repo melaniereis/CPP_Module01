@@ -6,7 +6,7 @@
 /*   By: meferraz <meferraz@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 14:36:54 by meferraz          #+#    #+#             */
-/*   Updated: 2025/03/24 15:21:56 by meferraz         ###   ########.fr       */
+/*   Updated: 2025/03/24 21:40:04 by meferraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ int main(void)
 
 	// Exit program
 	std::cout << GRN "Program execution completed successfully!" RESET << std::endl;
+	printSeparator();
 	return EXIT_SUCCESS;
 }
 
