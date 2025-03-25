@@ -6,11 +6,9 @@
 #    By: meferraz <meferraz@student.42porto.pt>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/24 15:02:25 by meferraz          #+#    #+#              #
-#    Updated: 2025/03/24 15:59:35 by meferraz         ###   ########.fr        #
+#    Updated: 2025/03/24 22:00:38 by meferraz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-# This is a simple Makefile for the zombie exercise.
 
 NAME        = zombieHorde
 
