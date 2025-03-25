@@ -6,7 +6,7 @@
 /*   By: meferraz <meferraz@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 17:27:57 by meferraz          #+#    #+#             */
-/*   Updated: 2025/03/25 21:44:19 by meferraz         ###   ########.fr       */
+/*   Updated: 2025/03/25 21:59:18 by meferraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,5 @@ class Harl
 		void	warning(void);
 		void	error(void);
 };
-
-void	headerPrinter(std::string text, int width, char padding, std::string color);
 
 #endif

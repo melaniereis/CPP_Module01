@@ -6,7 +6,7 @@
 /*   By: meferraz <meferraz@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 21:33:27 by meferraz          #+#    #+#             */
-/*   Updated: 2025/03/25 21:57:07 by meferraz         ###   ########.fr       */
+/*   Updated: 2025/03/25 22:00:22 by meferraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,35 @@ void headerPrinter(const std::string &title, int width, char fillChar, const cha
 			<< std::endl;
 }
 
+/**
+ * @brief Default constructor for Harl class.
+ *
+ * Prints a green success message to the standard output.
+ */
 Harl::Harl(void)
 {
 	std::cout << GRNHB "Harl 2.0 initialized successfully ✅" RESET << std::endl;
 }
 
+/**
+ * @brief Destructor for Harl class.
+ *
+ * Prints a red error message to the standard output,
+ * indicating that Harl 2.0 is shutting down.
+ */
 Harl::~Harl(void)
 {
 	std::cout << REDHB "Harl 2.0 shutting down... ☠" RESET << std::endl;
 }
 
+/**
+ * @brief Allows the user to specify a complaint level and Harl will complain accordingly.
+ *
+ * @param level The level of complaint. Must be one of DEBUG, INFO, WARNING, or ERROR.
+ *
+ * If the specified level is not one of the above,
+ * Harl will not complain at all.
+ */
 void Harl::complain(std::string level)
 {
 	// Array of function pointers
@@ -65,6 +84,12 @@ void Harl::complain(std::string level)
 	}
 }
 
+/**
+ * @brief Complains at DEBUG level.
+ *
+ * Prints a yellow complaint message to the standard output,
+ * indicating that the user loves having extra bacon for their burger.
+ */
 void Harl::debug(void)
 {
 	headerPrinter("[ DEBUG ]", 40, ' ', BWHT);
@@ -74,6 +99,12 @@ void Harl::debug(void)
 			  << std::endl;
 }
 
+/**
+ * @brief Complains at INFO level.
+ *
+ * Prints a cyan complaint message to the standard output,
+ * indicating that the user is complaining about the cost of extra bacon.
+ */
 void Harl::info(void)
 {
 	headerPrinter("[ INFO ]", 40, ' ', BWHT);
@@ -84,6 +115,12 @@ void Harl::info(void)
 			  << std::endl;
 }
 
+/**
+ * @brief Complains at WARNING level.
+ *
+ * Prints a magenta complaint message to the standard output,
+ * indicating that the user is threatening to leave because of the cost of extra bacon.
+ */
 void Harl::warning(void)
 {
 	headerPrinter("[ WARNING ]", 40, ' ', BWHT);
@@ -93,6 +130,13 @@ void Harl::warning(void)
 			  << std::endl;
 }
 
+/**
+ * @brief Complains at ERROR level.
+ *
+ * Prints a red complaint message to the standard output,
+ * indicating that the user is unhappy about the cost of extra bacon
+ * and wants to speak to the manager.
+ */
 void Harl::error(void)
 {
 	headerPrinter("[ ERROR ]", 40, ' ', BWHT);
