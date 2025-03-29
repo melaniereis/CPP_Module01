@@ -6,7 +6,7 @@
 /*   By: meferraz <meferraz@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 14:36:54 by meferraz          #+#    #+#             */
-/*   Updated: 2025/03/24 21:39:35 by meferraz         ###   ########.fr       */
+/*   Updated: 2025/03/29 08:58:28 by meferraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@
  * to the standard output. It is used to visually separate different
  * sections of the program and to provide a title for the program.
  */
-static void printHeader() {
+static void printHeader()
+{
 	std::cout << GRN << "=====================================" << RESET << std::endl;
 	std::cout << BLUHB << "          Zombie Horde Demo          " << RESET << std::endl;
 	std::cout << GRN << "=====================================" << RESET << std::endl;
@@ -32,7 +33,8 @@ static void printHeader() {
  * This function prints a green separator line to the standard output.
  * It is used to visually separate different sections of the program.
  */
-static void printSeparator() {
+static void printSeparator()
+{
 	std::cout << GRN << "-------------------------------------" << RESET << std::endl;
 }
 
@@ -45,7 +47,7 @@ static void printSeparator() {
  * @param hordeName Output parameter for the base name of the horde.
  * @return True if parsing is successful, false otherwise.
  */
-static bool parseArguments(int argc, char* argv[], int& hordeSize, std::string& hordeName)
+static bool parseArguments(int argc, char *argv[], int &hordeSize, std::string &hordeName)
 {
 	if (argc != 3)
 	{
@@ -53,12 +55,16 @@ static bool parseArguments(int argc, char* argv[], int& hordeSize, std::string& 
 		return false;
 	}
 
-	try {
-		hordeSize = std::stoi(argv[1]);
-		if (hordeSize <= 0)
+	try
+	{
+		std::istringstream iss(argv[1]);
+		iss >> hordeSize;
+		if (iss.fail() || hordeSize <= 0)
 			throw std::invalid_argument("Horde size must be a positive integer.");
 		hordeName = argv[2];
-	} catch (const std::exception& e) {
+	}
+	catch (const std::exception &e)
+	{
 		std::cerr << "Error parsing arguments: " << e.what() << std::endl;
 		return false;
 	}
@@ -77,7 +83,7 @@ static bool createAndAnnounceHorde(int hordeSize, std::string hordeName)
 {
 	try
 	{
-		Zombie* horde = zombieHorde(hordeSize, hordeName);
+		Zombie *horde = zombieHorde(hordeSize, hordeName);
 		std::cout << BLU "Creating Zombie Horde..." RESET << std::endl;
 		printSeparator();
 		std::cout << MAG "Zombie Horde Announcing..." RESET << std::endl;
@@ -88,7 +94,8 @@ static bool createAndAnnounceHorde(int hordeSize, std::string hordeName)
 		delete[] horde; // Use delete[] for arrays
 		printSeparator();
 		return true;
-	} catch (const std::exception& e)
+	}
+	catch (const std::exception &e)
 	{
 		std::cerr << "An error occurred: " << e.what() << std::endl;
 		return false;
@@ -101,7 +108,7 @@ static bool createAndAnnounceHorde(int hordeSize, std::string hordeName)
  * The program creates a header, parses command-line arguments, creates a zombie horde,
  * makes each zombie announce itself, and finally deletes the horde.
  */
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
 	int hordeSize;
 	std::string hordeName;

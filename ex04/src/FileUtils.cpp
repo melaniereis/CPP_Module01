@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fileUtils.cpp                                      :+:      :+:    :+:   */
+/*   FileUtils.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: meferraz <meferraz@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 16:30:37 by meferraz          #+#    #+#             */
-/*   Updated: 2025/03/25 16:40:25 by meferraz         ###   ########.fr       */
+/*   Updated: 2025/03/29 09:46:24 by meferraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  */
 bool readFile(const std::string &filename, std::string &content)
 {
-	std::ifstream file(filename);
+	std::ifstream file(filename.c_str());
 	if (!file.is_open())
 		return false;
 
@@ -43,7 +43,7 @@ bool readFile(const std::string &filename, std::string &content)
 
 bool writeFile(const std::string &filename, const std::string &content)
 {
-	std::ofstream file(filename);
+	std::ofstream file(filename.c_str());
 	if (!file.is_open())
 		return false;
 

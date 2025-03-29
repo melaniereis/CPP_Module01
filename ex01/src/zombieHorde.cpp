@@ -6,7 +6,7 @@
 /*   By: meferraz <meferraz@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 15:29:30 by meferraz          #+#    #+#             */
-/*   Updated: 2025/03/24 15:52:17 by meferraz         ###   ########.fr       */
+/*   Updated: 2025/03/29 09:01:12 by meferraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,14 @@
  * @param name The base name of the Zombie objects.
  * @return A pointer to an array of Zombie objects.
  */
-Zombie* zombieHorde(int N, std::string name)
+Zombie *zombieHorde(int N, std::string name)
 {
-	Zombie* zombies = new Zombie[N];
+	Zombie *zombies = new Zombie[N];
 	for (int i = 0; i < N; i++)
 	{
-		zombies[i].setName(name + std::to_string(i));
+		std::ostringstream oss;
+		oss << i;
+		zombies[i].setName(name + oss.str());
 	}
 	return (zombies);
 }

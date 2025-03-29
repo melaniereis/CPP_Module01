@@ -6,7 +6,7 @@
 /*   By: meferraz <meferraz@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 17:27:54 by meferraz          #+#    #+#             */
-/*   Updated: 2025/03/26 12:09:36 by meferraz         ###   ########.fr       */
+/*   Updated: 2025/03/29 10:13:14 by meferraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void harlFilter(std::string level, Harl &harl);
 static void printHeader()
 {
 	std::cout << BGRN << "=====================================" << RESET << std::endl;
-	std::cout << WHTHB << "         Harl Complaint System       " << RESET << std::endl;
+	std::cout << BWHT << "         Harl Complaint System       " << RESET << std::endl;
 	std::cout << BGRN << "=====================================" << RESET << std::endl;
 }
 
@@ -82,14 +82,14 @@ int main(int argc, char **argv)
 }
 
 /**
-* @brief Filter for Harl's complain method.
-*
-* This function filters the level argument and calls Harl's complain
-* method with the appropriate level.
-*
-* @param level The level of the complaint.
-* @param harl Instance of Harl class.
-*/
+ * @brief Filter for Harl's complain method.
+ *
+ * This function filters the level argument and calls Harl's complain
+ * method with the appropriate level.
+ *
+ * @param level The level of the complaint.
+ * @param harl Instance of Harl class.
+ */
 void harlFilter(std::string level, Harl &harl)
 {
 	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
@@ -104,27 +104,27 @@ void harlFilter(std::string level, Harl &harl)
 	}
 	switch (index)
 	{
-		case DEBUG:
-			harl.complain("DEBUG");
-			harl.complain("INFO");
-			harl.complain("WARNING");
-			harl.complain("ERROR");
-			break;
-		case INFO:
-			harl.complain("INFO");
-			harl.complain("WARNING");
-			harl.complain("ERROR");
-			break;
-		case WARNING:
-			harl.complain("WARNING");
-			harl.complain("ERROR");
-			break;
-		case ERROR:
-			harl.complain("ERROR");
-			break;
-		default:
-			std::cout << REDHB << "[ Probably complaining about insignificant problems 🤐 ]"
-			<< RESET << std::endl;
-			break;
+	case DEBUG:
+		harl.complain("DEBUG");
+		harl.complain("INFO");
+		harl.complain("WARNING");
+		harl.complain("ERROR");
+		break;
+	case INFO:
+		harl.complain("INFO");
+		harl.complain("WARNING");
+		harl.complain("ERROR");
+		break;
+	case WARNING:
+		harl.complain("WARNING");
+		harl.complain("ERROR");
+		break;
+	case ERROR:
+		harl.complain("ERROR");
+		break;
+	default:
+		std::cout << REDHB << "[ Probably complaining about insignificant problems 🤐 ]"
+				  << RESET << std::endl;
+		break;
 	}
 }

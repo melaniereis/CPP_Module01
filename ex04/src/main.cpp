@@ -6,7 +6,7 @@
 /*   By: meferraz <meferraz@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 16:08:08 by meferraz          #+#    #+#             */
-/*   Updated: 2025/03/25 16:39:30 by meferraz         ###   ########.fr       */
+/*   Updated: 2025/03/29 09:46:41 by meferraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
  * to the standard output. It is used to visually separate different
  * sections of the program and to provide a title for the program.
  */
-static void printHeader() {
+static void printHeader()
+{
 	std::cout << BGRN << "=====================================" << RESET << std::endl;
 	std::cout << BLUHB << "       String Replacement Demo       " << RESET << std::endl;
 	std::cout << BGRN << "=====================================" << RESET << std::endl;
@@ -31,7 +32,8 @@ static void printHeader() {
  * This function prints a green separator line to the standard output.
  * It is used to visually separate different sections of the program.
  */
-static void printSeparator() {
+static void printSeparator()
+{
 	std::cout << GRN << "-------------------------------------" << RESET << std::endl;
 }
 

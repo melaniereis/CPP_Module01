@@ -6,12 +6,13 @@
 /*   By: meferraz <meferraz@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 21:29:07 by meferraz          #+#    #+#             */
-/*   Updated: 2025/03/24 21:37:56 by meferraz         ###   ########.fr       */
+/*   Updated: 2025/03/29 09:02:50 by meferraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
+#include <cstdlib>
 #include "../inc/ansi.h"
 
 /**
@@ -21,7 +22,8 @@
  * to the standard output. It is used to visually separate different
  * sections of the program and to provide a title for the program.
  */
-static void printHeader() {
+static void printHeader()
+{
 	std::cout << BGRN << "=====================================" << RESET << std::endl;
 	std::cout << BLUHB << "             Memory Demo             " << RESET << std::endl;
 	std::cout << BGRN << "=====================================" << RESET << std::endl;
@@ -33,7 +35,8 @@ static void printHeader() {
  * This function prints a green separator line to the standard output.
  * It is used to visually separate different sections of the program.
  */
-static void printSeparator() {
+static void printSeparator()
+{
 	std::cout << GRN << "-------------------------------------" << RESET << std::endl;
 }
 
@@ -51,8 +54,8 @@ int main(void)
 	printSeparator();
 
 	std::string str = "HI THIS IS BRAIN";
-	std::string* stringPTR = &str;
-	std::string& stringREF = str;
+	std::string *stringPTR = &str;
+	std::string &stringREF = str;
 
 	std::cout << YEL << "Memory Addresses and Values" << RESET << std::endl;
 	printSeparator();
@@ -74,4 +77,3 @@ int main(void)
 
 	return EXIT_SUCCESS;
 }
-
