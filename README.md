@@ -556,6 +556,6 @@ After mastering Module 01, you'll be ready to tackle:
 
 *"With great power comes great responsibility... especially with pointers!"*
 
-**Module 01 Complete** ✨ | **Previous**: [← Module 00](../CPP_Module00/README.md) | **Next**: [Module 02 →](../CPP_Module02/README.md)
+**Module 01 Complete** ✨ | **Previous**: [← Module 00](https://github.com/melaniereis/CPP_Module00/) | **Next**: [Module 02 →](https://github.com/melaniereis/CPP_Module02/)
 
 </div>
